@@ -1,0 +1,10 @@
+body {
+  background-color: white;
+  font-family: Inria Sans;
+}
+img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #fdc435;
+}
