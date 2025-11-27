@@ -109,6 +109,39 @@ img {
   color: #333;
   line-height: 1.4;
 }
+
+/* buttons inside the home-text should align with the text content */
+.home-text .button {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-start; /* keep buttons left-aligned with the text */
+}
+
+.project-button,
+.linkedin-button {
+  font-weight: 600;
+  padding: 0.55rem 0.95rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.project-button {
+  background: #0a66ff;
+  color: #fff;
+}
+.project-button:hover {
+  opacity: 0.92;
+}
+.linkedin-button {
+  background: transparent;
+  color: #0a66ff;
+  border: 2px solid #0a66ff;
+}
+.linkedin-button:hover {
+  background: rgba(10, 102, 255, 0.06);
+}
 .home-image {
   flex: 0 0 auto; /* image keeps its own size */
   width: 220px; /* smaller so it doesn't push too far to the right */
@@ -127,6 +160,10 @@ img {
   }
   .home-text {
     width: 100%;
+  }
+  /* center the buttons on smaller screens */
+  .home-text .button {
+    justify-content: center;
   }
   .home-image {
     width: 160px;
@@ -157,4 +194,46 @@ img {
 .about-image img {
   width: 100%;
   height: auto;
+}
+.button {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.project-button {
+  background-color: #fdc435;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.project-button:hover {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.linkedin-button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid 2px black;
+}
+.linkedin-button:hover {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
