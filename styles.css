@@ -212,7 +212,7 @@ img {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -228,7 +228,7 @@ img {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
   border: solid 2px black;
