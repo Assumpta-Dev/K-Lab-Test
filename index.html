@@ -3,28 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>My Portfolio</title>
   </head>
-  <body>
-    <header>
-      <!-- navigation / header list: use a class so we can style it -->
-      <ul class="nav">
-        <li class="logo">AU</li>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#">PROJECTS</a></li>
-        <li><a href="#">SKILLS</a></li>
-        <li><a href="#">EXPERIENCES</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">CONTACT</a></li>
-      </ul>
-    </header>
-    <section>
-      <div class="home">
-        <div class="home-text">
+  <body class="w-full min-h-screen">
+    <div class="container">
+      <header class="navbar w-full">
+        <!-- navigation / header list: use a class so we can style it -->
+        <div class="nav flex justify-between items-center p-4 text-black">
+          <div class="text-lg font-bold logo">AU</div>
+          <ul class="flex space-x-6 flex-wrap font-small">
+            <li><a href=" #">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#project">PROJECTS</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#experience">EXPERIENCES</a></li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div
+        class="home w-full min-h-screen flex justify-between items-center text-black"
+      >
+        <div class="home-text justify-center">
           <h6 class="role">WEB DESIGNER</h6>
-          <h1>HELLO, my name is Assumpta Uwamariya</h1>
+          <h1 class="intro">HELLO, my name is Assumpta Uwamariya</h1>
           <p>
             I enjoy turning ideas into simple digital experiences. Good designs
             for me means beauty and function working together. I am a web
@@ -40,24 +46,253 @@
           <img src="image/copy.png" alt="profile picture" />
         </div>
       </div>
-    </section>
-    <section class="about" id="about">
-      <div class="about-text">
-        <h2>ABOUT ME</h2>
-        <p>
-          I am a passionate web designer with a keen eye for detail and a love
-          for creating beautiful and functional websites. With a strong
-          foundation in design principles and a deep understanding of user
-          experience, I strive to create digital experiences that are both
-          visually appealing and easy to navigate. My goal is to help businesses
-          establish a strong online presence through well-designed websites that
-          effectively communicate their brand message and engage their target
-          audience.
-        </p>
+
+      <div class="about" id="about">
+        <div class="about-text">
+          <h2>ABOUT ME</h2>
+          <p>
+            I am a passionate web designer with a keen eye for detail and a love
+            for creating beautiful and functional websites. With a strong
+            foundation in design principles and a deep understanding of user
+            experience, I strive to create digital experiences that are both
+            visually appealing and easy to navigate. My goal is to help
+            businesses establish a strong online presence through well-designed
+            websites that effectively communicate their brand message and engage
+            their target audience.
+          </p>
+          <div class="button">
+            <button class="resume-button">Resume</button>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="image/copy.png" alt="" srcset="" />
+        </div>
       </div>
-      <div class="about-image">
-        <img src="image/copy.png" alt="" srcset="" />
+    </div>
+    <div class="project w-full min-h-screen pb-32" id="project">
+      <div class="project-text">
+        <h2 class="items-center">PROJECTS</h2>
+        <div class="project-cards-wrapper">
+          <!-- two cards centered, no gap between them -->
+          <div class="project-cards">
+            <article class="project-card left">
+              <div class="project-card-body">
+                <h3>Fitness App</h3>
+                <p>
+                  Download our fitness app and stay healthy. Track your
+                  workouts, set goals, and monitor your progress with ease.
+                </p>
+              </div>
+              <button class="more-projects">View Project</button>
+            </article>
+            <article class="project-card right">
+              <img src="image/1.jpg" alt="Project image" />
+            </article>
+          </div>
+          <!-- second project (same layout) -->
+          <div class="project-cards">
+            <article class="project-card left">
+              <div class="project-card-body">
+                <h3>Shopping App</h3>
+                <p>
+                  Have access to all markets in one place. Shop from thousands
+                  of vendors.
+                </p>
+              </div>
+              <button class="more-projects">View Project</button>
+            </article>
+            <article class="project-card right">
+              <img src="image/2.jpg" alt="Project image 2" />
+            </article>
+          </div>
+          <div class="project-cards">
+            <article class="project-card left">
+              <div class="project-card-body">
+                <h3>Banking App</h3>
+                <p>You dont have to worry about your money, with our apps.</p>
+              </div>
+              <button class="more-projects">View Project</button>
+            </article>
+            <article class="project-card right">
+              <img src="image/3.jpg" alt="Project image" />
+            </article>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+    <div class="skills w-full min-h-screen" id="skills">
+      <h2 class="skills">SKILLS</h2>
+      <div
+        class="w-full flex flex-col-3 justify-center items-center skills-grid"
+      >
+        <div class="skill-card">
+          <img src="image/java-script.png" alt="" srcset="" />
+        </div>
+
+        <div class="skill-card">
+          <img src="image/java.png" alt="" srcset="" />
+        </div>
+
+        <div class="skill-card">
+          <img src="image/nodejs.png" alt="" srcset="" />
+        </div>
+
+        <div class="skill-card">
+          <img src="image/php.png" alt="" srcset="" />
+        </div>
+
+        <div class="skill-card">
+          <img src="image/figma.png" alt="" srcset="" />
+        </div>
+
+        <div class="skill-card">
+          <img src="image/html.png" alt="" srcset="" />
+        </div>
+
+        <div class="skill-card">
+          <img src="image/css-3.png" alt="" srcset="" />
+        </div>
+
+        <div class="skill-card">
+          <img src="image/python.png" alt="" srcset="" />
+        </div>
+
+        <div class="skill-card">
+          <img src="image/react.png" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="experience w-full min-h-screen flex flex-col justify-center items-center pb-32"
+      id="experience"
+    >
+      <h2 class="experiences p-4">Experiences</h2>
+      <div class="w-full flex flex-col gap-6 items-center">
+        <div class="experience-card">
+          <h6 class=" ">Lead Software Engineer at Galaxy Media</h6>
+          <span class="">November 2025 - Present</span>
+          <p>
+            Currently working as a lead software engineer at Galaxy Media, in
+            the Department of Innovations and Creativity, where I design and
+            develop modern digital solutions that drive the company’s creative
+            vision.
+          </p>
+        </div>
+        <div class="experience-card">
+          <h6 class=" ">Software developer at iwacu ltd</h6>
+          <span class="">Jan 2023 - Oct 2025</span>
+          <p>
+            Here is a smooth additional line you can add: I have worked as a
+            software engineer at IWACU Ltd, where I helped develop different
+            software solutions that improved their business operations and
+            supported their digital growth.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="blog w-full min-h-screen" id="blog">
+      <h2 class="blog">BLOG</h2>
+
+      <!-- center cards in a row, each card has image on top and content below -->
+      <div class="blog-cards">
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="image/a.jpg" alt="Biodiversity" />
+          </div>
+          <div class="blog-content">
+            <h6>Biodiversity</h6>
+            <p>Environmental conservation is our responsibility</p>
+            <button class="blog-button">Read More</button>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="image/b.jpg" alt="Biodiversity" />
+          </div>
+          <div class="blog-content">
+            <h6>Food Nutrition</h6>
+            <p>Healthy food gives health body, so dont hesitate</p>
+            <button class="blog-button">Read More</button>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="image/c.jpg" alt="Biodiversity" />
+          </div>
+          <div class="blog-content">
+            <h6>Body Exercise</h6>
+            <p>
+              Regular physical activity is essential for maintaining good health
+              and well-being.
+            </p>
+            <button class="blog-button">Read More</button>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="image/d.jpg" alt="Biodiversity" />
+          </div>
+          <div class="blog-content">
+            <h6>Team Work</h6>
+            <p>Creating inclusive environments for an effective teamwork</p>
+            <button class="blog-button">Read More</button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div
+      class="contact w-full min-h-screen flex flex-col justify-center items-center mx-auto"
+      id="contact"
+    >
+      <!-- inner wrapper keeps the heading and form grouped and centered -->
+      <div class="contact-inner">
+        <h2 class="contact-heading">Contact Me</h2>
+        <form
+          id="contact-form"
+          action=""
+          method="post"
+          data-endpoint="https://formspree.io/f/YOUR_FORM_ID"
+        >
+          <!-- feedback area (populated by main.js) -->
+          <div
+            id="contact-feedback"
+            class="form-feedback"
+            aria-live="polite"
+          ></div>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+        <!-- social icons are a single horizontal row under the form -->
+        <div class="social-media">
+          <img src="image/facebook.png" alt="" srcset="" />
+          <img src="image/twitter.png" alt="" srcset="" />
+          <img src="image/instagram.png" alt="" srcset="" />
+          <img src="image/pinterest.png" alt="" srcset="" />
+          <img src="image/youtube.png" alt="" srcset="" />
+        </div>
+      </div>
+      <p>Assumpta Uwamariya 2025 &copy;</p>
+    </div>
+    <div class="top flex p-2">
+      <img src="image/arrowUp.png " alt="" srcset="" />
+    </div>
+    <footer class="footer w-full h-16"></footer>
+    <script src="main.js"></script>
   </body>
 </html>
