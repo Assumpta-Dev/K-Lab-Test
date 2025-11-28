@@ -36,6 +36,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!form) return;
 
+  /* Mobile menu toggle: accessible and closes on link click or ESC/resize */
+  (function setupNavToggle() {
+    const nav = document.querySelector(".nav");
+    const toggle = document.querySelector(".menu-toggle");
+    if (!nav || !toggle) return;
+
+    const panel = nav.querySelector("#nav-links");
+
+    function setOpen(open) {
+      toggle.setAttribute("aria-expanded", String(open));
+      nav.classList.toggle("open", open);
+      if (!open) toggle.focus();
+    }
+
+    toggle.addEventListener("click", () =>
+      setOpen(!nav.classList.contains("open"))
+    );
+
+    // close when nav link clicked (single page internal links)
+    if (panel) {
+      panel.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => setOpen(false));
+      });
+    }
+
+    // close with Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.classList.contains("open")) setOpen(false);
+    });
+
+    // if user resizes to desktop size, make sure menu is closed
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 820 && nav.classList.contains("open"))
+        setOpen(false);
+    });
+  })();
+
   const feedbackEl = document.getElementById("contact-feedback");
   const submitBtn = form.querySelector('button[type="submit"]');
   // helper to show an alert message as a second visual confirmation
