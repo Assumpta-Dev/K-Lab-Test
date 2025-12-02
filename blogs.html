@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Blog — Assumpta Uwamariya</title>
+  </head>
+  <body class="w-full min-h-screen blogs-page">
+    <div class="container">
+      <header class="navbar w-full">
+        <div class="nav flex justify-between items-center p-4 text-black">
+          <div class="text-lg font-bold logo">AU</div>
+          <button
+            class="menu-toggle"
+            aria-controls="nav-links"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="hamburger" aria-hidden="true"></span>
+          </button>
+          <ul id="nav-links" class="flex space-x-6 flex-wrap font-small">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#project">PROJECTS</a></li>
+            <li><a href="index.html#skills">SKILLS</a></li>
+            <li><a href="index.html#experience">EXPERIENCES</a></li>
+            <li><a href="index.html#blog" aria-current="page">BLOG</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="blog w-full min-h-screen py-10">
+        <div class="max-w-1100 mx-auto px-4">
+          <h1 class="blog" style="text-align: left">Latest from the blog</h1>
+          <p style="max-width: 70ch; margin-bottom: 1.25rem; color: #444">
+            A curated set of posts about design, UX, and building beautiful,
+            functional websites — pulled from the short previews on the homepage
+            with extended excerpts here for readers.
+          </p>
+
+          <section class="blog-cards" aria-label="Blog list">
+            <article class="blog-card">
+              <div class="blog-image">
+                <img src="image/a.jpg" alt="Biodiversity" />
+              </div>
+              <div class="blog-content">
+                <h3>Biodiversity — How I Approach Environmental Design</h3>
+                <time datetime="2025-11-15">Nov 15, 2025</time>
+                <p>
+                  Environmental conservation informs my design — we can take
+                  cues from nature's balance when composing layouts, colours and
+                  information hierarchy. In this long-form piece I walk through
+                  three real client examples where a nature-driven design
+                  improved retention.
+                </p>
+                <a
+                  class="blog-button"
+                  href="#"
+                  aria-label="Read Biodiversity post"
+                  >Read More</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-image">
+                <img src="image/b.jpg" alt="Food Nutrition" />
+              </div>
+              <div class="blog-content">
+                <h3>Food & Nutrition — Design for Healthy Living</h3>
+                <time datetime="2025-08-06">Aug 6, 2025</time>
+                <p>
+                  Designing for healthy choices is about clarity and
+                  encouragement. This post highlights microcopy, visual cues and
+                  nudges that help users make better food choices in app flows.
+                </p>
+                <a
+                  class="blog-button"
+                  href="#"
+                  aria-label="Read Food Nutrition post"
+                  >Read More</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-image">
+                <img src="image/c.jpg" alt="Exercise" />
+              </div>
+              <div class="blog-content">
+                <h3>Body Exercise — UX for movement tracking</h3>
+                <time datetime="2025-05-22">May 22, 2025</time>
+                <p>
+                  Product design for fitness apps needs to balance motivation,
+                  privacy and data clarity. I show examples of onboarding flows
+                  and retention strategies that keep users coming back.
+                </p>
+                <a
+                  class="blog-button"
+                  href="#"
+                  aria-label="Read Body Exercise post"
+                  >Read More</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-image">
+                <img src="image/d.jpg" alt="Team Work" />
+              </div>
+              <div class="blog-content">
+                <h3>Team Work — Building Inclusive Design Teams</h3>
+                <time datetime="2024-12-10">Dec 10, 2024</time>
+                <p>
+                  Great products are made by teams that represent users. This
+                  article explores hiring, design pairing, and small rituals
+                  that improve collaboration.
+                </p>
+                <a class="blog-button" href="#" aria-label="Read Team Work post"
+                  >Read More</a
+                >
+              </div>
+            </article>
+          </section>
+
+          <nav
+            class="pagination"
+            aria-label="Pagination"
+            style="display: flex; gap: 8px; margin-top: 1.25rem"
+          >
+            <a href="#" class="more-projects">« Older</a>
+            <a href="#" class="more-projects">Newer »</a>
+          </nav>
+        </div>
+      </main>
+
+      <footer class="footer w-full h-16 p-6 text-center text-sm">
+        © Assumpta Uwamariya 2025
+      </footer>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

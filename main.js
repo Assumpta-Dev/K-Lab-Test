@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function setOpen(open) {
       toggle.setAttribute("aria-expanded", String(open));
       nav.classList.toggle("open", open);
+      if (panel) panel.classList.toggle("show", open);
       if (!open) toggle.focus();
     }
 
