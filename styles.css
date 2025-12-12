@@ -753,3 +753,13 @@ body.blogs-page .blog {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+.finance-tracker {
+  display: flex;
+}
+
+.finance-tracker img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
