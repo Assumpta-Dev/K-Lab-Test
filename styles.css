@@ -763,3 +763,9 @@ body.blogs-page .blog {
   object-fit: cover;
   display: block;
 }
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
