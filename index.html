@@ -3,27 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="src/output.css" />
     <link rel="stylesheet" href="styles.css" />
-    <title>My Portfolio</title>
+    <title>Assumpta Uwamariya — Portfolio</title>
   </head>
-  <body class="w-full min-h-screen">
+  <body class="w-full">
+
     <div class="container">
+      <!-- ── Navbar ── -->
       <header class="navbar w-full">
-        <!-- navigation / header list: use a class so we can style it -->
-        <div class="nav flex justify-between items-center p-4 text-black">
-          <div class="text-lg font-bold logo">AU</div>
-          <!-- Mobile menu toggle (hidden on large screens) -->
-          <button
-            class="menu-toggle"
-            aria-controls="nav-links"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+        <div class="nav">
+          <div class="logo">AU</div>
+          <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
             <span class="hamburger" aria-hidden="true"></span>
           </button>
-          <ul id="nav-links" class="flex space-x-6 flex-wrap font-small">
-            <li><a href=" #">HOME</a></li>
+          <ul id="nav-links">
+            <li><a href="#">HOME</a></li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#project">PROJECTS</a></li>
             <li><a href="#skills">SKILLS</a></li>
@@ -34,373 +32,214 @@
         </div>
       </header>
 
-      <div
-        class="home w-full min-h-screen flex justify-between items-center text-black"
-      >
-        <div class="home-text justify-center">
-          <h6 class="role">WEB DESIGNER</h6>
-          <h1 class="intro">HELLO, my name is Assumpta Uwamariya</h1>
-          <p>
-            I enjoy turning ideas into simple digital experiences. Good designs
-            for me means beauty and function working together. I am a web
-            designer based in Rwanda, specializing in designing and building
-            websites that are both visually appealing and user-friendly.
-          </p>
+      <!-- ── Hero ── -->
+      <section class="home fade-up">
+        <div class="home-text">
+          <p class="role">WEB DESIGNER &amp; DEVELOPER</p>
+          <h1>Hello, I'm Assumpta Uwamariya</h1>
+          <p>I turn ideas into clean, functional digital experiences. Based in Rwanda, I design and build websites that are both visually appealing and user-friendly.</p>
           <div class="button">
-            <a href="#project"
-              ><button class="project-button">Projects</button></a
-            >
-            <a
-              href="https://www.linkedin.com/in/assumpta-uwamariya-atwork/"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><button class="linkedin-button">LinkedIn</button></a
-            >
+            <a href="#project"><button class="project-button">Projects</button></a>
+            <a href="https://www.linkedin.com/in/assumpta-uwamariya-atwork/" target="_blank" rel="noopener noreferrer">
+              <button class="linkedin-button">LinkedIn</button>
+            </a>
           </div>
         </div>
         <div class="home-image">
-          <img src="image/mine.jpeg" alt="profile picture" />
+          <img src="image/mine.jpeg" alt="Assumpta Uwamariya" />
         </div>
-      </div>
+      </section>
 
-      <div class="about" id="about">
+      <!-- ── About ── -->
+      <section class="about fade-up" id="about">
         <div class="about-text">
           <h2>ABOUT ME</h2>
-          <p>
-            I am a passionate web designer with a keen eye for detail and a love
-            for creating beautiful and functional websites. With a strong
-            foundation in design principles and a deep understanding of user
-            experience, I strive to create digital experiences that are both
-            visually appealing and easy to navigate. My goal is to help
-            businesses establish a strong online presence through well-designed
-            websites that effectively communicate their brand message and engage
-            their target audience.
-          </p>
+          <p>I am a passionate web designer with a keen eye for detail and a love for creating beautiful, functional websites. With a strong foundation in design principles and a deep understanding of user experience, I strive to create digital experiences that are visually appealing and easy to navigate.</p>
+          <p>My goal is to help businesses establish a strong online presence through well-designed websites that effectively communicate their brand message and engage their target audience.</p>
           <div class="button">
             <button class="resume-button">Resume</button>
           </div>
         </div>
         <div class="about-image">
-          <img src="image/mine.jpeg" alt="" srcset="" />
+          <img src="image/mine.jpeg" alt="Assumpta Uwamariya" />
         </div>
-      </div>
+      </section>
     </div>
-    <div class="project w-full min-h-screen pb-32" id="project">
-      <div class="project-text">
-        <h2 class="items-center">PROJECTS</h2>
+
+    <!-- ── Projects ── -->
+    <section class="project" id="project">
+      <div class="container">
+        <h2>PROJECTS</h2>
         <div class="project-cards-wrapper">
-          <!-- two cards centered, no gap between them -->
-          <!--Finance-tracker -->
-          <div class="project-cards">
-            <article class="project-card left">
-              <div class="project-card-body">
-                <h3>Finance Tracker App</h3>
-                <p>You dont have to worry about your money, with our apps.</p>
-              </div>
-              <button class="more-projects">
-                <a
-                  href="https://my-finance-track.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View Project</a
-                >
-              </button>
-            </article>
-            <article class="finance-tracker project-card right">
-              <img src="image/finance.png" alt="Project image" />
-            </article>
-          </div>
-          <div class="project-cards">
-            <article class="project-card left">
-              <div class="project-card-body">
-                <h3>BIZTerimbere App</h3>
-                <p>
-                  BIZTerimbere is a smart inventory and profit optimization
-                  system built for small and medium businesses in Rwanda,
-                  enabling real-time stock tracking, sales recording, and
-                  automatic alerts for low stock and expiring products. It
-                  features an economic intelligence layer that connects to the
-                  World Bank API and live exchange rates to monitor Rwanda's
-                  economic indicators.
 
-                </p>
-              </div>
-              <button class="more-projects">
-                <a
-                  href="https://bizterimbere.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View Project</a
-                >
-              </button>
-            </article>
-            <article class="project-card right">
-              <img src="image/bizterimbere.png" alt="Project image" />
-            </article>
-          </div>
-          <!-- second project (same layout) -->
-          <div class="project-cards">
-            <article class="project-card left">
-              <div class="project-card-body">
-                <h3>Weather App</h3>
-                <p>
-                  A web application that allows users to search for any city
-                  worldwide and view real-time weather conditions along with a
-                  seven-day forecast.
-                </p>
-              </div>
-              <button class="more-projects">
-                <a
-                  href="https://weather-forecast-app-by-assumpta.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View Project</a
-                >
-              </button>
-            </article>
-            <article class="project-card right">
-              <img src="image/weather.png" alt="Project image 2" />
-            </article>
-          </div>
-          <div class="project-cards">
-            <article class="project-card left">
-              <div class="project-card-body">
-                <h3>Dessert Shop App</h3>
-                <p>
-                  A full-stack e-commerce application where users can browse
-                  desserts, add items to a cart, and place orders.
-                </p>
-              </div>
-              <button class="more-projects">
-                <a
-                  href="https://my-dessert-shop.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View Project</a
-                >
-              </button>
-            </article>
-            <article class="project-card right">
-              <img src="image/dessert.png" alt="Project image" />
-            </article>
-          </div>
+          <article class="project-card-new fade-up">
+            <img src="image/finance.png" alt="Finance Tracker App" />
+            <div class="project-card-overlay">
+              <h3>Finance Tracker App</h3>
+              <p>Track your money effortlessly with real-time insights and smart budgeting tools.</p>
+              <a href="https://my-finance-track.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card-new fade-up">
+            <img src="image/bizterimbere.png" alt="BIZTerimbere App" />
+            <div class="project-card-overlay">
+              <h3>BIZTerimbere App</h3>
+              <p>Smart inventory &amp; profit optimization for SMBs in Rwanda with economic intelligence.</p>
+              <a href="https://bizterimbere.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card-new fade-up">
+            <img src="image/weather.png" alt="Weather App" />
+            <div class="project-card-overlay">
+              <h3>Weather App</h3>
+              <p>Search any city worldwide and view real-time conditions with a 7-day forecast.</p>
+              <a href="https://weather-forecast-app-by-assumpta.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card-new fade-up">
+            <img src="image/dessert.png" alt="Dessert Shop App" />
+            <div class="project-card-overlay">
+              <h3>Dessert Shop App</h3>
+              <p>Full-stack e-commerce app — browse desserts, add to cart, and place orders.</p>
+              <a href="https://my-dessert-shop.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </article>
+
         </div>
       </div>
-    </div>
-    <div class="skills w-full min-h-screen" id="skills">
-      <h2 class="skills">SKILLS</h2>
-      <div
-        class="w-full flex flex-col-3 justify-center items-center skills-grid"
-      >
-        <div class="skill-card">
-          <img src="image/java-script.png" alt="" srcset="" />
-        </div>
+    </section>
 
-        <div class="skill-card">
-          <img src="image/java.png" alt="" srcset="" />
-        </div>
-
-        <div class="skill-card">
-          <img src="image/nodejs.png" alt="" srcset="" />
-        </div>
-
-        <div class="skill-card">
-          <img src="image/php.png" alt="" srcset="" />
-        </div>
-
-        <div class="skill-card">
-          <img src="image/figma.png" alt="" srcset="" />
-        </div>
-
-        <div class="skill-card">
-          <img src="image/html.png" alt="" srcset="" />
-        </div>
-
-        <div class="skill-card">
-          <img src="image/css-3.png" alt="" srcset="" />
-        </div>
-
-        <div class="skill-card">
-          <img src="image/python.png" alt="" srcset="" />
-        </div>
-
-        <div class="skill-card">
-          <img src="image/react.png" alt="" srcset="" />
+    <!-- ── Skills ── -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2>SKILLS</h2>
+        <div class="skills-grid">
+          <div class="skill-card"><img src="image/java-script.png" alt="JavaScript" /></div>
+          <div class="skill-card"><img src="image/java.png" alt="Java" /></div>
+          <div class="skill-card"><img src="image/nodejs.png" alt="Node.js" /></div>
+          <div class="skill-card"><img src="image/php.png" alt="PHP" /></div>
+          <div class="skill-card"><img src="image/figma.png" alt="Figma" /></div>
+          <div class="skill-card"><img src="image/html.png" alt="HTML" /></div>
+          <div class="skill-card"><img src="image/css-3.png" alt="CSS" /></div>
+          <div class="skill-card"><img src="image/python.png" alt="Python" /></div>
+          <div class="skill-card"><img src="image/react.png" alt="React" /></div>
         </div>
       </div>
-    </div>
-    <div
-      class="experience w-full min-h-screen flex flex-col justify-center items-center pb-32"
-      id="experience"
-    >
-      <h2 class="experiences p-4">Experiences</h2>
-      <div class="w-full flex flex-col gap-6 items-center">
-        <div class="experience-card">
-          <h6 class=" ">Lead Software Engineer at Galaxy Media</h6>
-          <span class="">November 2025 - Present</span>
-          <p>
-            Currently working as a lead software engineer at Galaxy Media, in
-            the Department of Innovations and Creativity, where I design and
-            develop modern digital solutions that drive the company’s creative
-            vision.
-          </p>
-        </div>
-        <div class="experience-card">
-          <h6 class=" ">Software developer at iwacu ltd</h6>
-          <span class="">Jan 2023 - Oct 2025</span>
-          <p>
-            Here is a smooth additional line you can add: I have worked as a
-            software engineer at IWACU Ltd, where I helped develop different
-            software solutions that improved their business operations and
-            supported their digital growth.
-          </p>
+    </section>
+
+    <!-- ── Experience ── -->
+    <section class="experience" id="experience">
+      <div class="container" style="width:100%">
+        <h2>EXPERIENCE</h2>
+        <div class="experience-cards-inner">
+
+          <div class="experience-card fade-up">
+            <h6>Lead Software Engineer — Galaxy Media</h6>
+            <span>November 2025 – Present</span>
+            <p>Working in the Department of Innovations and Creativity, designing and developing modern digital solutions that drive the company's creative vision.</p>
+          </div>
+
+          <div class="experience-card fade-up">
+            <h6>Software Developer — IWACU Ltd</h6>
+            <span>Jan 2023 – Oct 2025</span>
+            <p>Developed software solutions that improved business operations and supported digital growth across multiple product lines.</p>
+          </div>
+
         </div>
       </div>
-    </div>
-    <div class="blog w-full min-h-screen" id="blog">
-      <h2 class="blog">BLOG</h2>
+    </section>
 
-      <!-- center cards in a row, each card has image on top and content below -->
-      <div class="blog-cards">
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="image/a.jpg" alt="Biodiversity" />
-          </div>
-          <div class="blog-content">
-            <h6>Biodiversity</h6>
-            <p>Environmental conservation is our responsibility</p>
-            <button class="blog-button">
-              <a href="blogs.html" target="_blank" rel="noopener noreferrer"
-                >Read More</a
-              >
-            </button>
-          </div>
-        </article>
+    <!-- ── Blog ── -->
+    <section class="blog" id="blog">
+      <div class="container">
+        <h2>BLOG</h2>
+        <div class="blog-cards">
 
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="image/b.jpg" alt="Biodiversity" />
-          </div>
-          <div class="blog-content">
-            <h6>Food Nutrition</h6>
-            <p>Healthy food gives health body, so dont hesitate</p>
-            <button class="blog-button">
-              <a href="blogs.html" target="_blank" rel="noopener noreferrer"
-                >Read More</a
-              >
-            </button>
-          </div>
-        </article>
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="image/c.jpg" alt="Biodiversity" />
-          </div>
-          <div class="blog-content">
-            <h6>Body Exercise</h6>
-            <p>
-              Regular physical activity is essential for maintaining good health
-              and well-being.
-            </p>
-            <button class="blog-button">
-              <a href="blogs.html" target="_blank" rel="noopener noreferrer"
-                >Read More</a
-              >
-            </button>
-          </div>
-        </article>
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="image/d.jpg" alt="Biodiversity" />
-          </div>
-          <div class="blog-content">
-            <h6>Team Work</h6>
-            <p>Creating inclusive environments for an effective teamwork</p>
-            <button class="blog-button">
-              <a href="blogs.html" target="_blank" rel="noopener noreferrer"
-                >Read More</a
-              >
-            </button>
-          </div>
-        </article>
+          <article class="blog-card">
+            <div class="blog-image"><img src="image/a.jpg" alt="Biodiversity" /></div>
+            <div class="blog-content">
+              <h6>Biodiversity</h6>
+              <p>Environmental conservation is our shared responsibility.</p>
+              <button class="blog-button"><a href="blogs.html" target="_blank" rel="noopener noreferrer">Read More</a></button>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image"><img src="image/b.jpg" alt="Food Nutrition" /></div>
+            <div class="blog-content">
+              <h6>Food Nutrition</h6>
+              <p>Healthy food gives a healthy body — don't hesitate to start.</p>
+              <button class="blog-button"><a href="blogs.html" target="_blank" rel="noopener noreferrer">Read More</a></button>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image"><img src="image/c.jpg" alt="Body Exercise" /></div>
+            <div class="blog-content">
+              <h6>Body Exercise</h6>
+              <p>Regular physical activity is essential for maintaining good health.</p>
+              <button class="blog-button"><a href="blogs.html" target="_blank" rel="noopener noreferrer">Read More</a></button>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image"><img src="image/d.jpg" alt="Team Work" /></div>
+            <div class="blog-content">
+              <h6>Team Work</h6>
+              <p>Creating inclusive environments for effective collaboration.</p>
+              <button class="blog-button"><a href="blogs.html" target="_blank" rel="noopener noreferrer">Read More</a></button>
+            </div>
+          </article>
+
+        </div>
       </div>
-    </div>
-    <div
-      class="contact w-full min-h-screen flex flex-col justify-center items-center mx-auto"
-      id="contact"
-    >
-      <!-- inner wrapper keeps the heading and form grouped and centered -->
+    </section>
+
+    <!-- ── Contact ── -->
+    <section class="contact" id="contact">
       <div class="contact-inner">
-        <h2 class="contact-heading">Contact Me</h2>
-        <form
-          id="contact-form"
-          action=""
-          method="post"
-          data-endpoint="https://formspree.io/f/YOUR_FORM_ID"
-        >
-          <!-- feedback area (populated by main.js) -->
-          <div
-            id="contact-feedback"
-            class="form-feedback"
-            aria-live="polite"
-          ></div>
+        <h2>CONTACT ME</h2>
+        <form id="contact-form">
+          <div id="contact-feedback" class="form-feedback" aria-live="polite"></div>
           <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
           </div>
           <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
           </div>
           <div class="form-group">
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required />
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+250 7XX XXX XXX" required />
           </div>
           <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here…" required></textarea>
           </div>
           <button type="submit" class="submit-button">Send Message</button>
         </form>
-        <!-- social icons are a single horizontal row under the form -->
+
         <div class="social-media">
-          <a
-            href="https://web.facebook.com/Assumpta.Umarii/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img src="image/facebook.png" alt="" srcset=""
-          /></a>
-          <a
-            href="https://x.com/Assumpta_Umarii"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img src="image/twitter.png" alt="" srcset=""
-          /></a>
-          <a
-            href="https://www.instagram.com/assumpta_umarii/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img src="image/instagram.png" alt="" srcset=""
-          /></a>
-          <a
-            href="https://www.pinterest.com/Assumpta_Umarii/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img src="image/pinterest.png" alt="" srcset=""
-          /></a>
-          <a
-            href="https://www.youtube.com/@MoonGamer08"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img src="image/youtube.png" alt="" srcset=""
-          /></a>
+          <a href="https://web.facebook.com/Assumpta.Umarii/" target="_blank" rel="noopener noreferrer"><img src="image/facebook.png" alt="Facebook" /></a>
+          <a href="https://x.com/Assumpta_Umarii" target="_blank" rel="noopener noreferrer"><img src="image/twitter.png" alt="Twitter" /></a>
+          <a href="https://www.instagram.com/assumpta_umarii/" target="_blank" rel="noopener noreferrer"><img src="image/instagram.png" alt="Instagram" /></a>
+          <a href="https://www.pinterest.com/Assumpta_Umarii/" target="_blank" rel="noopener noreferrer"><img src="image/pinterest.png" alt="Pinterest" /></a>
+          <a href="https://www.youtube.com/@MoonGamer08" target="_blank" rel="noopener noreferrer"><img src="image/youtube.png" alt="YouTube" /></a>
         </div>
       </div>
-      <p>&copy; Assumpta Uwamariya 2025</p>
+      <p style="font-size:0.85rem;color:#666;">&copy; Assumpta Uwamariya 2025</p>
+    </section>
+
+    <div class="top" role="button" tabindex="0" aria-label="Back to top">
+      <img src="image/arrowUp.png" alt="Back to top" />
     </div>
-    <div class="top flex p-2">
-      <img src="image/arrowUp.png " alt="" srcset="" />
-    </div>
-    <footer class="footer w-full h-16"></footer>
+
+    <footer class="footer w-full">© Assumpta Uwamariya 2025</footer>
+
     <script src="main.js"></script>
   </body>
 </html>
