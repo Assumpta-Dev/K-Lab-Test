@@ -85,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
       showFeedback("Thank you! Your message has been sent successfully.", "success");
       form.reset();
     } catch (err) {
-      showFeedback("Failed to send. Please email directly: uwamariyaassumpta24@gmail.com", "error");
+      const detail = err && (err.text || err.message || JSON.stringify(err));
+      showFeedback("Failed to send: " + detail, "error");
       console.error("EmailJS error:", err);
     }
 
