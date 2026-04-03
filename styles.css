@@ -50,15 +50,19 @@ header.navbar {
 header.navbar::before {
   content: "";
   position: absolute;
-  inset: -100%;
+  width: 200%;
+  height: 600%;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
   z-index: -1;
   background: conic-gradient(
     from 0deg,
     transparent 0deg,
-    transparent 300deg,
-    #ffe040 330deg,
-    #fdc435 345deg,
-    #ffe040 360deg
+    transparent 310deg,
+    #fdc435 340deg,
+    #fff0a0 350deg,
+    #fdc435 360deg
   );
   animation: navRing 3s linear infinite;
 }
@@ -68,7 +72,6 @@ header.navbar::after {
   inset: 2px;
   z-index: -1;
   background: #fff;
-  border-radius: 2px;
 }
 .nav {
   display: flex;
@@ -774,9 +777,13 @@ h1 {
   border-radius: 6px;
   opacity: 0.9;
   transition: opacity 0.2s, transform 0.2s;
-  filter: brightness(0) saturate(100%) invert(85%) sepia(60%) saturate(500%) hue-rotate(5deg) brightness(105%);
+  filter: brightness(0) saturate(100%) invert(70%) sepia(80%) saturate(600%) hue-rotate(355deg) brightness(105%);
 }
-.footer-socials img:hover { opacity: 1; transform: translateY(-2px); filter: brightness(0) saturate(100%) invert(85%) sepia(60%) saturate(500%) hue-rotate(5deg) brightness(130%); }
+.footer-socials img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  filter: brightness(0) saturate(100%) invert(70%) sepia(80%) saturate(800%) hue-rotate(355deg) brightness(120%);
+}
 .footer-bottom {
   text-align: center;
   font-size: 0.8rem;
