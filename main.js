@@ -25,6 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", () => { if (window.innerWidth > 820) setOpen(false); });
   }
 
+  // ── EmailJS config — replace these three values from your EmailJS dashboard ──
+  const EMAILJS_PUBLIC_KEY  = "2aEJq8nO2LJJ7uxdN";
+  const EMAILJS_SERVICE_ID  = "service_9w0oiim";
+  const EMAILJS_TEMPLATE_ID = "template_m9qei3y";
+
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
   // ── Contact form ─────────────────────────────────────────
   const form       = document.getElementById("contact-form");
   const feedbackEl = document.getElementById("contact-feedback");
@@ -46,13 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const message = form.querySelector("#message").value.trim();
     const errors  = [];
 
-    [["#name", name.length >= 2, "Please enter your full name."],
-     ["#email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email), "Please enter a valid email."],
-     ["#phone", /^[+\d\s()-.]{7,20}$/.test(phone), "Please enter a valid phone number."],
-     ["#message", message.length >= 10, "Message must be at least 10 characters."]
+    [["#name",    name.length >= 2,                              "Please enter your full name."],
+     ["#email",   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email),     "Please enter a valid email."],
+     ["#phone",   /^[+\d\s()-.]{7,20}$/.test(phone),            "Please enter a valid phone number."],
+     ["#message", message.length >= 10,                         "Message must be at least 10 characters."]
     ].forEach(([sel, ok, msg]) => {
-      const el = form.querySelector(sel);
-      el.classList.toggle("input-error", !ok);
+      form.querySelector(sel).classList.toggle("input-error", !ok);
       if (!ok) errors.push(msg);
     });
 
@@ -70,26 +76,17 @@ document.addEventListener("DOMContentLoaded", function () {
     submitBtn.textContent = "Sending…";
 
     try {
-      const res = await fetch("http://localhost:3001/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name:    form.querySelector("#name").value.trim(),
-          email:   form.querySelector("#email").value.trim(),
-          phone:   form.querySelector("#phone").value.trim(),
-          message: form.querySelector("#message").value.trim(),
-        }),
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name: form.querySelector("#name").value.trim(),
+        from_email: form.querySelector("#email").value.trim(),
+        phone:      form.querySelector("#phone").value.trim(),
+        message:    form.querySelector("#message").value.trim(),
       });
-
-      const data = await res.json();
-      if (res.ok && data.success) {
-        showFeedback("Thank you! Your message has been sent successfully.", "success");
-        form.reset();
-      } else {
-        showFeedback(data.error || "Something went wrong. Please try again.", "error");
-      }
-    } catch {
-      showFeedback("Could not reach the server. Please try again later.", "error");
+      showFeedback("Thank you! Your message has been sent successfully.", "success");
+      form.reset();
+    } catch (err) {
+      showFeedback("Failed to send. Please email directly: uwamariyaassumpta24@gmail.com", "error");
+      console.error("EmailJS error:", err);
     }
 
     submitBtn.disabled = false;
