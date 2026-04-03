@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ── EmailJS config — replace these three values from your EmailJS dashboard ──
   const EMAILJS_PUBLIC_KEY  = "2aEJq8nO2LJJ7uxdN";
   const EMAILJS_SERVICE_ID  = "service_9w0oiim";
-  const EMAILJS_TEMPLATE_ID = "template_r8cr9qj";
+  const EMAILJS_TEMPLATE_ID = "template_xfz11qk";
 
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
