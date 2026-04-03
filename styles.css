@@ -39,28 +39,28 @@ header.navbar {
   100% { transform: rotate(360deg); }
 }
 
-/* wrapper that clips the spinning gradient to just the border edge */
 header.navbar {
   position: sticky;
   top: 0;
   z-index: 50;
   background: #fff;
   isolation: isolate;
+  overflow: hidden;
 }
 header.navbar::before {
   content: "";
   position: absolute;
-  inset: -3px;
+  inset: -100%;
   z-index: -1;
-  border-radius: 4px;
   background: conic-gradient(
-    #fdc435 0deg,
-    #ffe566 20deg,
-    #fdc435 40deg,
-    transparent 40deg,
-    transparent 360deg
+    from 0deg,
+    transparent 0deg,
+    transparent 300deg,
+    #ffe040 330deg,
+    #fdc435 345deg,
+    #ffe040 360deg
   );
-  animation: navRing 2s linear infinite;
+  animation: navRing 3s linear infinite;
 }
 header.navbar::after {
   content: "";
@@ -68,7 +68,7 @@ header.navbar::after {
   inset: 2px;
   z-index: -1;
   background: #fff;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 .nav {
   display: flex;
