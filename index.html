@@ -8,9 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="src/output.css" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Assumpta Uwamariya — Portfolio</title>
+    <title>Assumpta Uwamariya — Software Engineer</title>
   </head>
-  <body class="w-full">
+  <body class="bg-dark text-white overflow-x-hidden">
+    <!-- Animated Background -->
+    <div class="bg-animation">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="orb orb-4"></div>
+    </div>
 
     <div class="container">
       <!-- ── Navbar ── -->
@@ -21,212 +28,180 @@
             <span class="hamburger" aria-hidden="true"></span>
           </button>
           <ul id="nav-links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#project">PROJECTS</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#experience">EXPERIENCES</a></li>
-            <li><a href="#blog">BLOG</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact" class="btn-contacts">Contacts <span class="arrow">→</span></a></li>
           </ul>
         </div>
       </header>
 
-      <!-- ── Hero ── -->
-      <section class="home fade-up">
-        <div class="home-text">
-          <p class="role">SOFTWARE ENGINEER &amp; DEVELOPER</p>
-          <h1>Hello, I'm Assumpta Uwamariya</h1>
-          <p>I turn ideas into clean, functional digital experiences. Based in Rwanda, I design and build websites that are both visually appealing and user-friendly.</p>
-          <div class="button">
-            <a href="#project"><button class="project-button">Projects</button></a>
-            <a href="https://www.linkedin.com/in/assumpta-uwamariya-atwork/" target="_blank" rel="noopener noreferrer">
-              <button class="linkedin-button">LinkedIn</button>
-            </a>
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="hero-greeting">Hi, I'm <span class="fancy-name">Assumpta</span> <span class="accent-name">Uwamariya</span></p>
+            <div class="divider"></div>
+            <h1 class="hero-title">
+              I build Innovative Software Solutions<br>
+              to Build a Connected <span class="accent">{World}</span>
+            </h1>
+            <p class="hero-description">
+              I turn ideas into clean, functional digital experiences. Based in Rwanda, I design and build websites that are both visually appealing and user-friendly.
+            </p>
+            <div class="hero-actions">
+              <a href="#about" class="btn btn-primary">About me</a>
+              <a href="#contact" class="btn btn-secondary">Let's talk <span class="arrow">→</span></a>
+            </div>
           </div>
-        </div>
-        <div class="home-image">
-          <img src="image/mine.jpeg" alt="Assumpta Uwamariya" />
+          <div class="hero-image-container">
+            <div class="headshot-mask">
+              <img src="image/mine.jpeg" alt="Assumpta Uwamariya Headshot" class="hero-headshot" />
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- ── About ── -->
-      <section class="about fade-up" id="about">
-        <div class="about-text">
-          <h2>ABOUT ME</h2>
-          <p>I am a passionate web designer with a keen eye for detail and a love for creating beautiful, functional websites. With a strong foundation in design principles and a deep understanding of user experience, I strive to create digital experiences that are visually appealing and easy to navigate.</p>
-          <p>My goal is to help businesses establish a strong online presence through well-designed websites that effectively communicate their brand message and engage their target audience.</p>
-          <div class="button">
-            <button class="resume-button">Resume</button>
+      <!-- About Section -->
+      <section class="about-section fade-up" id="about">
+        <div class="glass-card">
+          <div class="about-grid">
+            <div class="about-image">
+              <img src="image/mine.jpeg" alt="Assumpta Uwamariya" class="profile-pict" />
+            </div>
+            <div class="about-text">
+              <h2>About Me</h2>
+              <p class="hero-subtitle">I'm Assumpta Uwamariya, a software {engineer}</p>
+              <p>
+                I am a passionate software engineer with a keen eye for detail and a love for creating beautiful, functional digital solutions. 
+                With a strong foundation in modern web technologies, I strive to build experiences that are visually stunning and highly performant.
+              </p>
+              <div class="hero-actions" style="margin-top: 2rem;">
+                <button class="btn btn-primary">Resume</button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="about-image">
-          <img src="image/mine.jpeg" alt="Assumpta Uwamariya" />
+          </div>
         </div>
       </section>
     </div>
 
-    <!-- ── Projects ── -->
-    <section class="project" id="project">
+    <!-- Projects Section -->
+    <section class="projects-section fade-up" id="projects">
       <div class="container">
-        <h2>PROJECTS</h2>
-        <div class="project-cards-wrapper">
-
-          <article class="project-card-new fade-up">
-            <div class="project-card-image">
-              <img src="image/finance.png" alt="Finance Tracker App" />
-              <div class="project-card-overlay">
-                <p>Track your money effortlessly with real-time insights and smart budgeting tools.</p>
-                <a href="https://my-finance-track.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-              </div>
-            </div>
-            <div class="project-card-label"><h3>Finance Tracker App</h3></div>
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <article class="glass-card project-card">
+            <img src="image/finance.png" alt="Finance Tracker App" />
+            <h3>Finance Tracker App</h3>
+            <p>Track your money effortlessly with real-time insights and smart budgeting tools.</p>
+            <a href="https://my-finance-track.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View Project</a>
           </article>
 
-          <article class="project-card-new fade-up">
-            <div class="project-card-image">
-              <img src="image/bizterimbere.png" alt="BIZTerimbere App" />
-              <div class="project-card-overlay">
-                <p>Smart inventory &amp; profit optimization for SMBs in Rwanda with economic intelligence.</p>
-                <a href="https://bizterimbere.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-              </div>
-            </div>
-            <div class="project-card-label"><h3>BIZTerimbere App</h3></div>
+          <article class="glass-card project-card">
+            <img src="image/bizterimbere.png" alt="BIZTerimbere App" />
+            <h3>BIZTerimbere App</h3>
+            <p>Smart inventory & profit optimization for SMBs in Rwanda with economic intelligence.</p>
+            <a href="https://bizterimbere.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View Project</a>
           </article>
 
-          <article class="project-card-new fade-up">
-            <div class="project-card-image">
-              <img src="image/weather.png" alt="Weather App" />
-              <div class="project-card-overlay">
-                <p>Search any city worldwide and view real-time conditions with a 7-day forecast.</p>
-                <a href="https://weather-forecast-app-by-assumpta.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-              </div>
-            </div>
-            <div class="project-card-label"><h3>Weather App</h3></div>
+          <article class="glass-card project-card">
+            <img src="image/weather.png" alt="Weather App" />
+            <h3>Weather App</h3>
+            <p>Search any city worldwide and view real-time conditions with a 7-day forecast.</p>
+            <a href="https://weather-forecast-app-by-assumpta.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View Project</a>
           </article>
 
-          <article class="project-card-new fade-up">
-            <div class="project-card-image">
-              <img src="image/dessert.png" alt="Dessert Shop App" />
-              <div class="project-card-overlay">
-                <p>Full-stack e-commerce app — browse desserts, add to cart, and place orders.</p>
-                <a href="https://my-dessert-shop.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-              </div>
-            </div>
-            <div class="project-card-label"><h3>Dessert Shop App</h3></div>
+          <article class="glass-card project-card">
+            <img src="image/dessert.png" alt="Dessert Shop App" />
+            <h3>Dessert Shop App</h3>
+            <p>Full-stack e-commerce app — browse desserts, add to cart, and place orders.</p>
+            <a href="https://my-dessert-shop.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View Project</a>
           </article>
-
         </div>
+
       </div>
     </section>
 
-    <!-- ── Skills ── -->
-    <section class="skills" id="skills">
+    <!-- Skills Section -->
+    <section class="skills-section fade-up" id="skills">
       <div class="container">
-        <h2>SKILLS</h2>
-        <div class="skills-grid">
-          <div class="skill-card"><img src="image/java-script.png" alt="JavaScript" /></div>
-          <div class="skill-card"><img src="image/java.png" alt="Java" /></div>
-          <div class="skill-card"><img src="image/nodejs.png" alt="Node.js" /></div>
-          <div class="skill-card"><img src="image/php.png" alt="PHP" /></div>
-          <div class="skill-card"><img src="image/figma.png" alt="Figma" /></div>
-          <div class="skill-card"><img src="image/html.png" alt="HTML" /></div>
-          <div class="skill-card"><img src="image/css-3.png" alt="CSS" /></div>
-          <div class="skill-card"><img src="image/python.png" alt="Python" /></div>
-          <div class="skill-card"><img src="image/react.png" alt="React" /></div>
-          <div class="skill-card"><img src="image/mongodb.png" alt="MongoDB" /></div>
-          <div class="skill-card"><img src="image/prisma.png" alt="Prisma" /></div>
-        </div>
+        <h2>Tech Stack</h2>
+        <div class="glass-card">
+          <div class="skills-grid">
+            <div class="skill-item"><img src="image/java-script.png" alt="JavaScript" /><span>JavaScript</span></div>
+            <div class="skill-item"><img src="image/java.png" alt="Java" /><span>Java</span></div>
+            <div class="skill-item"><img src="image/nodejs.png" alt="Node.js" /><span>Node.js</span></div>
+            <div class="skill-item"><img src="image/php.png" alt="PHP" /><span>PHP</span></div>
+            <div class="skill-item"><img src="image/figma.png" alt="Figma" /><span>Figma</span></div>
+            <div class="skill-item"><img src="image/html.png" alt="HTML" /><span>HTML</span></div>
+            <div class="skill-item"><img src="image/css-3.png" alt="CSS" /><span>CSS</span></div>
+            <div class="skill-item"><img src="image/python.png" alt="Python" /><span>Python</span></div>
+            <div class="skill-item"><img src="image/react.png" alt="React" /><span>React</span></div>
+            <div class="skill-item"><img src="image/mongodb.png" alt="MongoDB" /><span>MongoDB</span></div>
+            <div class="skill-item"><img src="image/prisma.png" alt="Prisma" /><span>Prisma</span></div>
+            <div class="skill-item"><img src="image/R.png" alt="R" /><span>R</span></div>
+            <div class="skill-item"><img src="image/Kotlin.png" alt="Kotlin" /><span>Kotlin</span></div>
+          </div>
+        </div>  
       </div>
     </section>
 
-    <!-- ── Experience ── -->
-    <section class="experience" id="experience">
-      <h2>EXPERIENCE</h2>
-      <div class="experience-cards-inner">
-        <div class="experience-card fade-up">
-          <h6>Lead Software Engineer — Galaxy Media</h6>
-          <span>November 2025 – Present</span>
-          <p>Working in the Department of Innovations and Creativity, designing and developing modern digital solutions that drive the company's creative vision.</p>
-        </div>
-        <div class="experience-card fade-up">
-          <h6>Software Developer — IWACU Ltd</h6>
-          <span>Jan 2023 – Oct 2025</span>
-          <p>Developed software solutions that improved business operations and supported digital growth across multiple product lines.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Blog ── -->
-    <section class="blog" id="blog">
+    <!-- Blog Section -->
+    <section class="blog-section fade-up" id="blog">
       <div class="container">
-        <h2>BLOG</h2>
-        <div class="blog-cards">
-
-          <article class="blog-card">
-            <div class="blog-image"><img src="image/a.jpg" alt="Biodiversity" /></div>
-            <div class="blog-content">
-              <h6>Biodiversity</h6>
-              <p>Environmental conservation is our shared responsibility.</p>
-              <button class="blog-button"><a href="blogs.html" target="_blank" rel="noopener noreferrer">Read More</a></button>
-            </div>
+        <h2>My Blogs</h2>
+        <div class="project-grid">
+          <article class="glass-card project-card">
+            <img src="image/a.jpg" alt="Biodiversity" />
+            <h3>Biodiversity</h3>
+            <p>Environmental conservation is our shared responsibility.</p>
+            <a href="blogs.html" rel="noopener noreferrer" class="btn btn-secondary">Read More</a>
           </article>
-
-          <article class="blog-card">
-            <div class="blog-image"><img src="image/b.jpg" alt="Food Nutrition" /></div>
-            <div class="blog-content">
-              <h6>Food Nutrition</h6>
-              <p>Healthy food gives a healthy body — don't hesitate to start.</p>
-              <button class="blog-button"><a href="blogs.html" target="_blank" rel="noopener noreferrer">Read More</a></button>
-            </div>
+          <article class="glass-card project-card">
+            <img src="image/b.jpg" alt="Food Nutrition" />
+            <h3>Food Nutrition</h3>
+            <p>Healthy food gives a healthy body — don't hesitate to start.</p>
+            <a href="blogs.html" rel="noopener noreferrer" class="btn btn-secondary">Read More</a>
           </article>
-
-          <article class="blog-card">
-            <div class="blog-image"><img src="image/c.jpg" alt="Body Exercise" /></div>
-            <div class="blog-content">
-              <h6>Body Exercise</h6>
-              <p>Regular physical activity is essential for maintaining good health.</p>
-              <button class="blog-button"><a href="blogs.html" target="_blank" rel="noopener noreferrer">Read More</a></button>
-            </div>
+          <article class="glass-card project-card">
+            <img src="image/c.jpg" alt="Body Exercise" />
+            <h3>Body Exercise</h3>
+            <p>Regular physical activity is essential for maintaining good health.</p>
+            <a href="blogs.html" rel="noopener noreferrer" class="btn btn-secondary">Read More</a>
           </article>
-
-          <article class="blog-card">
-            <div class="blog-image"><img src="image/d.jpg" alt="Team Work" /></div>
-            <div class="blog-content">
-              <h6>Team Work</h6>
-              <p>Creating inclusive environments for effective collaboration.</p>
-              <button class="blog-button"><a href="blogs.html" target="_blank" rel="noopener noreferrer">Read More</a></button>
-            </div>
+          <article class="glass-card project-card">
+            <img src="image/d.jpg" alt="Team Work" />
+            <h3>Team Work</h3>
+            <p>Creating inclusive environments for effective collaboration.</p>
+            <a href="blogs.html" rel="noopener noreferrer" class="btn btn-secondary">Read More</a>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- ── Contact ── -->
-    <section class="contact" id="contact">
-      <div class="contact-inner">
-        <h2>CONTACT ME</h2>
-        <form id="contact-form">
-          <div id="contact-feedback" class="form-feedback" aria-live="polite"></div>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="+250 7XX XXX XXX" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message here…" required></textarea>
-          </div>
-          <button type="submit" class="submit-button">Send Message</button>
-        </form>
+
+    <!-- Contact Section -->
+    <section class="contact-section fade-up" id="contact">
+      <div class="container">
+        <div class="glass-card contact-container">
+          <h2>Get in Touch</h2>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+          <div id="contact-feedback"></div>
+        </div>
       </div>
     </section>
 
@@ -234,51 +209,47 @@
       <img src="image/arrowUp.png" alt="Back to top" />
     </div>
 
-    <!-- ── Footer ── -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <!-- Left: brand + links -->
-        <div class="footer-brand">
-          <div class="footer-logo">AU</div>
-          <p class="footer-tagline">Software Engineer &amp; Developer<br/>based in Kigali, Rwanda</p>
-          <nav class="footer-links">
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#project">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-        <!-- Center: map -->
-        <div class="footer-map">
-          <iframe
-            title="Kigali, Rwanda"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=30.0200%2C-1.9800%2C30.1400%2C-1.9000&amp;layer=mapnik&amp;marker=-1.9441%2C30.0619"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-        <!-- Right: contact info + real social icons -->
-        <div class="footer-contact">
-          <h4>Get in Touch</h4>
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fdc435" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            uwamariyaassumpta24@gmail.com
-          </p>
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fdc435" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            Kigali, Rwanda
-          </p>
-          <div class="footer-socials">
-            <a href="https://web.facebook.com/Assumpta.Umarii/" target="_blank" rel="noopener noreferrer"><img src="image/facebook.png" alt="Facebook" /></a>
-            <a href="https://x.com/Assumpta_Umarii" target="_blank" rel="noopener noreferrer"><img src="image/twitter.png" alt="Twitter" /></a>
-            <a href="https://www.instagram.com/assumpta_umarii/" target="_blank" rel="noopener noreferrer"><img src="image/instagram.png" alt="Instagram" /></a>
-            <a href="https://www.pinterest.com/Assumpta_Umarii/" target="_blank" rel="noopener noreferrer"><img src="image/pinterest.png" alt="Pinterest" /></a>
-            <a href="https://www.youtube.com/@MoonGamer08" target="_blank" rel="noopener noreferrer"><img src="image/youtube.png" alt="YouTube" /></a>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-info">
+            <h3 class="footer-heading">Get In Touch</h3>
+            <div class="footer-contact">
+              <div class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/484/484167.png" alt="Location" />
+                <span>Kigali, Rwanda</span>
+              </div>
+              <a href="tel:0780193787" class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" />
+                <span>+250780193787</span>
+              </a>
+              <a href="mailto:uwamariyaassumpta24@gmail.com" class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" alt="Gmail" />
+                <span>uwamariyaassumpta24@gmail.com</span>
+              </a>
+            </div>
+            <div class="social-links-icons">
+              <a href="https://web.facebook.com/Assumpta.Umarii/" target="_blank" rel="noopener noreferrer"><img src="image/facebook.png" alt="Facebook" /></a>
+              <a href="https://x.com/Assumpta_Umarii" target="_blank" rel="noopener noreferrer"><img src="image/twitter.png" alt="Twitter" /></a>
+              <a href="https://www.instagram.com/assumpta_umarii/" target="_blank" rel="noopener noreferrer"><img src="image/instagram.png" alt="Instagram" /></a>
+              <a href="https://www.pinterest.com/Assumpta_Umarii/" target="_blank" rel="noopener noreferrer"><img src="image/pinterest.png" alt="Pinterest" /></a>
+              <a href="https://www.youtube.com/@MoonGamer08" target="_blank" rel="noopener noreferrer"><img src="image/youtube.png" alt="YouTube" /></a>
+            </div>
+          </div>
+          <div class="footer-map">
+            <iframe
+              title="Kigali, Rwanda"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=30.0200%2C-1.9800%2C30.1400%2C-1.9000&amp;layer=mapnik&amp;marker=-1.9441%2C30.0619"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
+        <div class="footer-bottom">
+          <p>© 2026 Assumpta Uwamariya. All rights reserved.</p>
+        </div>
       </div>
-      <div class="footer-bottom">&copy; 2025 Assumpta Uwamariya — All rights reserved</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
